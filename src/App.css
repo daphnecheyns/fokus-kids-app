@@ -1,0 +1,92 @@
+/* Kleurenvariabelen */
+:root {
+  --appelblauwzeegroen: #0097b2;
+  --rood: #ff3131;
+  --antraciet: #404040;
+  --lichtgrijs: #d9d9d9;
+}
+
+@font-face {
+  font-family: 'Genty Sans';
+  src: url('./assets/fonts/GentySans.ttf') format('truetype');
+}
+
+/* Algemene stijlen */
+body {
+  font-family: 'Genty Sans', 'Helvetica';
+  background-color: var(--lichtgrijs); /* Zorgt voor een grijze achtergrond voor de hele pagina */
+  color: var(--antraciet);
+  padding: 20px; /* Ruimte binnenin de body */
+  border: 10px solid var(--lichtgrijs); /* Onzichtbaar kader (zelfde kleur als achtergrond) */
+}
+
+
+/* Header met logo en welkomstbericht */
+.header {
+  display: flex;
+  align-items: center; /* Zorgt ervoor dat items verticaal gecentreerd zijn */
+  justify-content: space-between; /* Plaatst logo en tekst aan weerszijden */
+  gap: 20px;
+  background-color: var(--lichtgrijs); /* Zorgt ervoor dat de header dezelfde kleur heeft als de body */
+  padding: 10px 20px; /* Voeg padding toe voor ruimte rondom de header */
+  margin: 0; /* Verwijder de marge bovenaan de header */
+}
+
+.logo {
+  width: 150px; /* Pas de grootte van het logo aan naar wens */
+  height: auto;
+  cursor: pointer;
+}
+
+.welcome-text {
+  margin-left: auto; /* Duwt de welkomsttekst naar de rechterkant */
+  text-align: right; /* Zorgt ervoor dat de tekst binnen het element rechts uitgelijnd is */
+}
+
+.welcome-text h1 {
+  font-size: 60px;
+  margin: 0;
+}
+
+.welcome-text p {
+  font-size: 20px;
+  margin: 0;
+}
+
+.antraciet {
+  color: var(--antraciet);
+}
+
+.appelblauwzeegroen {
+  color: var(--appelblauwzeegroen);
+}
+
+.rood {
+  color: var(--rood);
+}
+
+
+/* Iconen sectie */
+.icon-section {
+  display: flex;
+  justify-content: space-evenly; /* Zorgt ervoor dat de iconen evenveel ruimte krijgen */
+  align-items: center;
+  gap: 10px; /* Ruimte tussen de iconen */
+  width: 100%; /* Laat de iconen de volle breedte benutten */
+  margin-top: 70px; /* Marge aan de bovenkant */
+}
+
+.icon {
+  width: 140px; /* Zorgt ervoor dat de iconen even groot zijn */
+  height: 140px;
+  object-fit: contain; /* Zorgt dat de afbeelding zich aanpast */
+  cursor: pointer;
+  border-radius: 20px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3); /* Voeg standaard een schaduw toe aan de iconen */
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.icon:hover {
+  transform: scale(1.1);
+  box-shadow: 6px 6px 16px rgba(0, 0, 0, 0.4); /* Vergroot de schaduw bij hover */
+}

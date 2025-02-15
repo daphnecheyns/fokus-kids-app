@@ -1,0 +1,44 @@
+.homepage {
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+.header {
+  background-color: #4CAF50;
+  padding: 10px 0;
+}
+
+.logo {
+  height: 50px;
+}
+
+.nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.nav li {
+  display: inline;
+  margin: 0 15px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+}
+
+.nav a:hover {
+  text-decoration: underline;
+}
+
+main {
+  padding: 20px;
+}
+
+footer {
+  margin-top: 40px;
+  background-color: #333;
+  color: white;
+  padding: 10px;
+}

@@ -1,0 +1,65 @@
+/* Algemene klokstijl */
+.timer-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 20px;
+    background-color: var(--wit);
+}
+
+.clock-timer {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border: 5px solid #000;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+.clock-background {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.clock-stripes {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(circle, transparent 80%, #eee 80%);
+    background-size: 20% 20%;
+    background-position: center;
+}
+
+.minute-markers {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    height: 90%;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 1px solid #000;
+}
+
+.clock-foreground {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 4px;
+    height: 50%;
+    background-color: red;
+    transform-origin: 50% 100%;
+    transform: rotate(0deg);
+}
+
+.digital-timer {
+    margin-left: 20px;
+    font-family: 'Helvetica', sans-serif;
+    font-size: 32px;
+    color: #000;
+}

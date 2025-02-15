@@ -1,0 +1,237 @@
+/* Algemene stijlen */
+:root {
+    --lichtgrijs: #d9d9d9;
+    --app: #0097b2;
+    --rood: #ff3131;
+    --antraciet: #404040;
+    --wit: #ffffff;
+    --koraal: #ff5757;
+    --blauw: #38b6ff;
+    --geel: #ffde59;
+    --groen: #c1ff72;
+}
+
+/* Algemeen voor het stappenplan */
+.stappenplan-ochtend {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding: 20px;
+    font-family: 'GentySans', 'Helvetica';
+    background-color: var(--wit);
+    position: relative;
+}
+
+/* Voltooiingsberichten */
+.voltooiing-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 20px;
+    color: var(--wit);
+    opacity: 0;
+    animation: fadeIn 0.5s forwards;
+}
+
+.completion-message {
+    position: relative; /* Of gewoon weglaten als niet nodig */
+    bottom: auto; /* Zorgt ervoor dat de knop niet onnodig naar beneden wordt gedrukt */
+    left: auto; /* Voorkomt dat hij geforceerd naar links gaat */
+    transform: none; /* Geen extra verschuiving */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Zorgt ervoor dat alles netjes in het midden staat */
+    justify-content: center;
+    background-color: var(--groen);
+    color: var(--antraciet);
+    font-family: 'Genty Sans';
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 26px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+.completion-message.fail {
+    background-color: var(--rood);
+}
+
+.completion-message.success {
+    background-color: var(--groen);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Styling voor de timer en knoppen */
+.header {
+    padding: 0;
+}
+
+.timer-container {
+    background-color: var(--lichtgrijs);
+    border-radius: 90px;
+}
+
+.stappenplan-container {
+    padding: 20px;
+    background-color: white;
+    padding: 0; /* 0 boven/onder, 0 links/rechts */
+}
+
+/* Aanpassingen voor de titel en paragraaf */
+.title h1,
+.title p {
+    margin: 0;  /* Verwijder marges voor zowel h1 als p */
+    padding: 5px 0; /* Voeg wat padding toe zodat ze niet tegen elkaar of de rand aanplakken */
+}
+
+.stappenplan-content {
+    flex-grow: 1;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+    padding: 0 20px;
+}
+
+.stappenplan-ochtend h1 {
+    font-family: 'Genty Sans';
+    font-size: 24px;
+    background-color: var(--wit);
+}
+
+.stappenplan-ochtend p {
+    font-family: 'Helvetica';
+    font-size: 18px;
+    background-color: var(--wit);
+}
+
+/* Timer en knoppen */
+.timer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: flex-end;
+    margin: 0;
+}
+
+.timer-circle {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 5px solid var(--antraciet);
+    background: conic-gradient(#FF3131 calc(var(--timer-progress) * 1%), transparent 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.1s linear;
+    margin: 0;
+}
+
+.timer-circle .digital-clock {
+    font-size: 2rem;
+    color: var(--antraciet);
+}
+
+/* Starten en resetten van de timer */
+.timer-button-container {
+    margin-top: 0;
+}
+
+.start-btn,
+.reset-btn {
+    background-color: var(--antraciet);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+.start-btn:hover,
+.reset-btn:hover {
+    background-color: var(--rood);
+    transform: scale(1.05);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.start-btn:active,
+.reset-btn:active {
+    transform: scale(0.95);
+}
+
+/* Lijst van stappen */
+.stappenlijst {
+    list-style-type: none;
+    padding: 10px 0 0 20px;
+    margin-top: 20px;
+}
+
+.stap-item {
+    font-size: 18px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.stap-item.completed {
+    text-decoration: line-through;
+    color: var(--groen);
+}
+
+/* Aanpassingen volgens feedback */
+
+/* 1. Typfout in var(--wit) bij .menu li:hover */
+.menu li:hover {
+    background-color: #c1ff72;
+    color: var(--antraciet);
+}
+
+/* 2. Flexbox-problemen bij .content */
+.content {
+    display: flex;
+    justify-content: center; /* Of flex-start als dat beter past */
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* 3. Gebruik van min-width: 0 bij .menubalk, .stappenplannenbalk */
+.menubalk, .stappenplannenbalk {
+    flex: 1;
+    min-width: 200px;
+    max-width: 400px;
+}
+
+/* 4. Menu-items (.menu li) kleuren niet correct bij hover */
+.menu li:hover {
+    background-color: #c1ff72;
+    color: var(--antraciet);
+}
+
+/* 5. Padding en box-sizing in body */
+* {
+    box-sizing: border-box;
+}
+
+/* 6. Probleem met .menu op kleinere schermen */
+@media (max-width: 768px) {
+    .menu {
+        width: 90%;
+    }
+}

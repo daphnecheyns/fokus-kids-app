@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="Web site created using create-react-app" />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <title>Fokus</title>
+  </head>
+  
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    
+    <!-- React zal hier de app inladen -->
+    <div id="root"></div>
+
+    <!-- Verplaats de tijdsbalk logica naar React om het dynamisch toe te voegen -->
+    <script>
+      // Je kunt dit verplaatsen naar een React component als dat nodig is
+      window.onload = () => {
+        const timerBar = document.createElement('div');
+        timerBar.classList.add('timer-bar-container');
+        const bar = document.createElement('div');
+        bar.classList.add('timer-bar');
+        timerBar.appendChild(bar);
+        document.body.appendChild(timerBar);
+
+        let width = 0;
+        const duration = 10;  // Aantal seconden voor de tijdsbalk
+        const interval = setInterval(() => {
+          if (width >= 100) {
+            clearInterval(interval);
+          } else {
+            width += (100 / duration); // Verhoog de breedte per seconde
+            bar.style.width = width + '%';
+          }
+        }, 1000);
+      };
+    </script>
+  </body>
+</html>

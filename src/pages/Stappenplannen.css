@@ -1,0 +1,177 @@
+/* Algemene stijlen */
+:root {
+  --lichtgrijs: #d9d9d9;
+  --app: #0097b2;
+  --rood: #ff3131;
+  --antraciet: #404040;
+  --wit: #ffffff;
+  --koraal: #ff5757;
+  --blauw: #38b6ff;
+  --geel: #ffde59;
+  --groen: #c1ff72;
+}
+
+* {
+  box-sizing: border-box; /* Zorgt ervoor dat padding en margin goed berekend worden */
+}
+
+body {
+  font-family: 'Helvetica';
+  background-color: var(--lichtgrijs);
+  color: var(--antraciet);
+  margin: 0;
+  padding: 0;
+}
+
+/* Header met logo en welkomstbericht */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: var(--lichtgrijs);
+  margin: 0;
+}
+
+.logo {
+  width: 150px;
+  height: auto;
+  cursor: pointer;
+}
+
+.welcome-text h1 {
+  font-family: 'Genty Sans', Helvetica;
+  font-size: 50px;
+  margin: 0;
+}
+
+.welcome-text p {
+  font-size: 20px;
+  margin: 0;
+}
+
+.check {
+  color: var(--app);
+  padding: 5px;
+  border-radius: 50%;
+}
+
+/* Menu Styling */
+.menu {
+  width: 250px;
+  background-color: var(--wit);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.15); /* Schaduw rondom het menu */
+  padding: 20px;
+  border-radius: 20px;
+  margin-right: 10px;
+}
+
+.menu p {
+  font-family: 'Genty Sans';
+  font-size: 16px;
+}
+
+.menu h2 {
+  font-family: 'Helvetica';
+  font-weight: bold;
+  font-size: 20px;
+  margin-top: 10px;
+  color: var(--antraciet);
+}
+
+.menu ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.menu li {
+  font-family: 'Helvetica';
+  font-size: 16px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  color: var(--antraciet);
+  padding: 10px 15px;
+  background-color: var(--lichtgrijs);
+  border-radius: 10px;
+  margin-bottom: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.menu li:hover {
+  background-color: var(--groen);
+  color: var(--antraciet);
+}
+
+/* Main content styling */
+.content {
+  display: flex;
+  justify-content: center; /* Aangepast voor betere weergave */
+  padding: 20px;
+  border-radius: 20px;
+  gap: 20px;
+  flex-wrap: wrap; /* Zorgt ervoor dat de vakken niet boven elkaar komen te staan */
+}
+
+.menubalk, .stappenplannenbalk {
+  flex: 1; /* Zorgt dat beide balken zich aanpassen aan de beschikbare ruimte */
+  min-width: 0; /* Voorkomt dat een balk te breed wordt */
+  max-width: 400px; /* Toegevoegd om de breedte te beperken */
+}
+
+.stappenplan-content {
+  flex: 1 1 45%; /* Zorgt ervoor dat de vakken goed schalen */
+  padding: 20px;
+  background-color: var(--wit);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.15); /* Schaduw rondom de content sectie */
+  border-radius: 20px;
+  min-height: 200px; /* Zorgt voor een minimale hoogte van de content */
+}
+
+.stappenplan-content h2 {
+  font-size: 30px;
+  margin-bottom: 20px;
+  color: var(--app);
+}
+
+.stappenplan-content p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.stappenplan-text {
+  font-size: 18px;
+  margin-top: 20px;
+  font-weight: bold;
+  color: var(--antraciet);
+}
+
+/* Responsiveness: zorg ervoor dat de layout goed werkt op kleinere schermen */
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .menu {
+    margin-right: 0;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .stappenplan-content {
+    width: 100%;
+  }
+
+  .logo {
+    width: 120px;
+  }
+
+  .welcome-text h1 {
+    font-size: 40px;
+  }
+
+  /* Menu aanpassen voor kleinere schermen */
+  .menu {
+    width: 90%; /* Toegevoegd voor betere weergave op kleine schermen */
+  }
+}

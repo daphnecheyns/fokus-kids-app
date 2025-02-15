@@ -1,0 +1,205 @@
+/* Algemene stijlen */
+:root {
+    --lichtgrijs: #d9d9d9;
+    --app: #0097b2;
+    --rood: #ff3131;
+    --antraciet: #404040;
+    --succes: #C1FF72; /* Succesgroen */
+    --fout: #FF3131; /* Rood bij falen */
+}
+  
+body {
+    font-family: 'Helvetica', sans-serif;
+    background-color: var(--lichtgrijs);
+    color: var(--antraciet);
+    margin: 20px;
+    padding: 0;
+}
+
+/* Header met logo en welkomstbericht */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: var(--lichtgrijs);
+    margin: 0;
+}
+
+.logo {
+    width: 150px;
+    height: auto;
+    cursor: pointer;
+}
+
+.welcome-text h1 {
+    font-family: 'Genty Sans', sans-serif;
+    font-size: 60px;
+    margin: 0;
+}
+
+.welcome-text p {
+    font-size: 20px;
+    margin: 0;
+}
+
+.check {
+    color: var(--app);
+    padding: 5px;
+    border-radius: 50%;
+}
+
+/* Menu */
+.menu {
+    width: 250px;
+    background-color: #ffffff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+    padding: 20px;
+    border-radius: 20px;
+    margin-right: 20px;
+}
+
+.menu p {
+    font-family: 'Helvetica', sans-serif;
+    font-size: 16px;
+}
+
+.menu h2 {
+    font-family: 'Helvetica', sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    margin-top: 30px;
+}
+
+.menu ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.menu li {
+    font-family: 'Helvetica', sans-serif;
+    font-size: 16px;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+.menu li:hover {
+    color: var(--app);
+}
+
+/* Main content styling */
+.content {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.stappenplan-content {
+    flex-grow: 1;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+    border-radius: 20px;
+}
+
+/* Toevoeging van de tekst onder de titel */
+.stappenplan-text {
+    font-size: 18px;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+/* Extra functies voor de ochtendstappenplanpagina */
+.stappenplan-container {
+    padding: 20px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+}
+
+.stappenplan-container h1 {
+    font-size: 32px;
+    font-family: 'Genty Sans', sans-serif;
+    margin-bottom: 20px;
+}
+
+.stappenplan-container p {
+    font-size: 18px;
+}
+
+.timer {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+button {
+    background-color: var(--app);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: darken(var(--app), 10%);
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+li {
+    font-size: 18px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+li.completed {
+    text-decoration: line-through;
+    color: var(--succes);
+}
+
+li:hover {
+    color: var(--app);
+}
+
+li span {
+    margin-right: 10px;
+}
+
+/* Styling voor de tijdsbalk */
+.timer-bar-container {
+    position: relative;
+    width: 100%;
+    height: 20px;
+    background-color: #eee;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.timer-bar {
+    height: 100%;
+    background-color: var(--app);
+    border-radius: 10px;
+    width: 0%; /* Dit wordt dynamisch aangepast */
+    transition: width 1s;
+}
+
+/* Confetti en geluid */
+.confetti-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
