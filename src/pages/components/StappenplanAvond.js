@@ -13,9 +13,6 @@ function StappenplanAvond() {
     { id: 4, text: "Haren kammen 💇‍♂️ – Kam je haren netjes.", completed: false },
     { id: 5, text: "Tanden poetsen 🦷 – Poets je tanden goed.", completed: false },
     { id: 6, text: "Badkamer netjes achterlaten 🧼 – Ruim alles op en maak de wastafel schoon.", completed: false },
-    { id: 7, text: "Ontspan 🛋️ – Kijk nog even rustig tv in de zetel.", completed: false },
-    { id: 8, text: "Naar het toilet gaan 🚽 – Ga nog even naar het toilet voor het slapengaan.", completed: false },
-    { id: 9, text: "Zoentjes en knuffels 🤗 – Geef zoentjes en knuffels voor het slapengaan.", completed: false },
   ]);
 
   const [timerActief, setTimerActief] = useState(false);
@@ -97,7 +94,7 @@ function StappenplanAvond() {
       const successSoundEffect = new Howl({ src: [successSound] });
       successSoundEffect.play();
       playConfetti();
-      setCompletionMessage('🎉 Goed gedaan! Alle stappen zijn voltooid! 🎉');
+      setCompletionMessage('🎉 Goed gedaan! Nu mag je nog wat ontpannen in de zetel en naar tv kijken! 🎉');
       setTimerActief(false);
       releaseWakeLock();
     }

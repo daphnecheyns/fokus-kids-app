@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { BrowserRouter as Router, Route, Routes, useNavigate } from "react-router-dom";
 import "./App.css";
 import logo from "./assets/logo.png";
@@ -6,10 +6,12 @@ import kalendersIcon from "./assets/kalenders.png";
 import stappenplannenIcon from "./assets/stappenplannen.png";
 import timersIcon from "./assets/timers.png";
 import menuIcon from "./assets/menu.png";
-import Stappenplannen from "./pages/Stappenplannen"; // Zorg ervoor dat het pad klopt
-import StappenplanOchtend from "./pages/components/StappenplanOchtend"; // Zorg ervoor dat het pad klopt
+import Stappenplannen from "./pages/Stappenplannen";
+import StappenplanOchtend from "./pages/components/StappenplanOchtend";
 
 function App() {
+  useWakeLock(); // Wake Lock activeren
+
   return (
     <Router>
       <Routes>
@@ -74,4 +76,38 @@ function Home() {
       </section>
     </div>
   );
+}
+
+// Wake Lock API activeren
+function useWakeLock() {
+  useEffect(() => {
+    let wakeLock = null;
+
+    const requestWakeLock = async () => {
+      if ('wakeLock' in navigator) {
+        try {
+          wakeLock = await navigator.wakeLock.request('screen');
+          console.log("Wake Lock is actief!");
+        } catch (err) {
+          console.error(`Wake Lock fout: ${err.name}, ${err.message}`);
+        }
+      }
+    };
+
+    requestWakeLock();
+
+    // Wake Lock opnieuw aanvragen als de gebruiker de app weer opent
+    document.addEventListener("visibilitychange", () => {
+      if (document.visibilityState === "visible") {
+        requestWakeLock();
+      }
+    });
+
+    return () => {
+      if (wakeLock) {
+        wakeLock.release();
+        wakeLock = null;
+      }
+    };
+  }, []);
 }

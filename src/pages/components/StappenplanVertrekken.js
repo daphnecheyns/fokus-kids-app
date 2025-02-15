@@ -94,7 +94,7 @@ function StappenplanVertrekken() {
       const successSoundEffect = new Howl({ src: [successSound] });
       successSoundEffect.play();
       playConfetti();
-      setCompletionMessage('🎉 Goed gedaan! Alle stappen zijn voltooid! 🎉');
+      setCompletionMessage('🎉 Goed gedaan! Je bent klaar om te vertrekken! 🎉');
       setTimerActief(false);
       releaseWakeLock();
     }
