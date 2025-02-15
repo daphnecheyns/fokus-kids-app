@@ -1,70 +1,75 @@
-# Getting Started with Create React App
+# Fokus Kids App
+**Functionele Ondersteuning voor Kinderen met Uitdagingen in Structuur**
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Fokus Kids is een digitale oplossing voor kinderen die meer structuur in hun dagelijks leven nodig hebben. De app biedt hulpmiddelen zoals een dagkalender, to-do lijstjes, en visuele tijdsbalken. Deze hulpmiddelen helpen kinderen hun dag te plannen, taken uit te voeren en tijd beter te beheren.
 
-## Available Scripts
+## Getting Started with Create React App
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). Volg de stappen hieronder om het project lokaal te draaien.
+
+### Available Scripts
 
 In the project directory, you can run:
 
-### `npm start`
+#### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Start de app in de ontwikkelingsmodus.\
+Open [http://localhost:3000](http://localhost:3000) om de app in je browser te bekijken.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+De pagina wordt automatisch herladen wanneer je wijzigingen maakt.\
+Eventuele lint-fouten zullen ook in de console verschijnen.
 
-### `npm test`
+#### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Start de test runner in interactieve kijkmodus.\
+Zie de sectie over [running tests](https://facebook.github.io/create-react-app/docs/running-tests) voor meer informatie.
 
-### `npm run build`
+#### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Bouw de app voor productie in de `build` map.\
+De build wordt geoptimaliseerd voor de beste prestaties.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+De build is geminificeerd en de bestandsnamen bevatten hashes.\
+Je app is klaar om gedeployed te worden!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Zie de sectie over [deployment](https://facebook.github.io/create-react-app/docs/deployment) voor meer informatie.
 
-### `npm run eject`
+#### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+**Let op: dit is een eenmalige bewerking. Zodra je `eject` gebruikt, kun je niet meer terug!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Als je niet tevreden bent met de build tool en configuratiekeuzes, kun je op elk moment `eject` gebruiken. Deze opdracht verwijdert de enkele build-afhankelijkheid van je project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+In plaats daarvan worden alle configuratiebestanden en transitieve afhankelijkheden (webpack, Babel, ESLint, enz.) naar je project gekopieerd, zodat je volledige controle hebt.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Je hoeft `eject` niet te gebruiken; de gebundelde features zijn geschikt voor kleine en middelgrote deployments.
 
 ## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Je kunt meer leren in de [Create React App documentatie](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Om React te leren, bekijk de [React documentatie](https://reactjs.org/).
 
 ### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Deze sectie is verplaatst naar [hier](https://facebook.github.io/create-react-app/docs/code-splitting).
 
 ### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Deze sectie is verplaatst naar [hier](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size).
 
 ### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Deze sectie is verplaatst naar [hier](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app).
 
 ### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Deze sectie is verplaatst naar [hier](https://facebook.github.io/create-react-app/docs/advanced-configuration).
 
 ### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Deze sectie is verplaatst naar [hier](https://facebook.github.io/create-react-app/docs/deployment).
 
 ### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Deze sectie is verplaatst naar [hier](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify).
